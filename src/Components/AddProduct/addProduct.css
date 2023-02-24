@@ -1,0 +1,69 @@
+/* style for header */
+.addProductHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid black;
+  margin: 0 20px;
+}
+
+/* Button style */
+.btnDiv {
+  display: flex;
+  gap: 50px;
+}
+
+.btnSave {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+}
+
+.btnCancel {
+  background-color: red;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+}
+
+/* container style */
+.container {
+  display: flex;
+}
+
+/* Form style */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  gap: 30px;
+  align-items: center;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dimension {
+  display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin-top: 10px;
+    align-items: center;
+}
