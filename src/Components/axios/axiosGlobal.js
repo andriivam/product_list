@@ -35,6 +35,7 @@ export const addProduct = async (data) => {
 export const deleteProducts = async (id) => {
     console.log(id, 'id from axios func');
     const {requestBody} = id;
+    // data: { ids: id }
     try {
         const response = await axios.delete(`http://localhost:3001/productsList`, {
             headers: {
