@@ -46,21 +46,21 @@ export default function AddProduct() {
         <div className="box">
           <label htmlFor="sku">SKU </label>
           <div className="inputBox">
-          <input type="text" name="sku" {...register('sku', { required: true })} /> 
+          <input id="sku" type="text" name="sku" {...register('sku', { required: true })} /> 
             {errors.sku && (<p style={{ color: "red" }}>Please, submit required data!</p>)}
           </div>
         </div>
         <div className="box">
           <label htmlFor="name">Name</label>
           <div className="inputBox">
-            <input type="text" name="name" {...register('name', {required: true})} />
+            <input id="name" type="text" name="name" {...register('name', {required: true})} />
             {errors.name && (<p style={{ color: "red" }}>Please, submit required data!</p>)}
           </div>
         </div>
         <div className="box">
           <label htmlFor="price">Price($)</label>
           <div className="inputBox">
-            <input type="number" name="price" {...register('price', {required: true})} />
+            <input id="price" type="number" name="price" {...register('price', {required: true})} />
             {errors.price && (<p style={{ color: "red" }}>Please, submit required data!</p>)}
           </div>
         </div>
