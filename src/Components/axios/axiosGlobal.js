@@ -33,14 +33,16 @@ export const addProduct = async (data) => {
 
 // Delete products
 export const deleteProducts = async (id) => {
+ 
     console.log(id, 'id from axios func');
-    const {requestBody} = id;
+    const requestBody = {ids: id};
+    console.log(requestBody, 'requestBody')
     try {
-        const response = await axios.delete(`http://localhost:3001/productsList`, {
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            data: requestBody
+        const response = await axios.delete(`/productsList`, {
+            // headers: {
+            //     'Content-Type': 'application/json'
+            // },
+            data: {id}
         });
         console.log(response.data, "DeleteResponse");
     } catch (err) {

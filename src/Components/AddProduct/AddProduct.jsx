@@ -81,9 +81,9 @@ export default function AddProduct() {
             <input type="number" {...register('weight')} /></label> : null}
           {productType === 'furniture' ? (<div className="dimension">
           <p>Please, provide dimensions in CM</p>
-            <label>Height (CM)<input type="number" {...register('height')} /></label>
-            <label>Width (CM)<input type="number" {...register('width')} /></label>
-            <label>Length (CM)<input type="number" {...register('length')} /></label> </div>)
+            <label className="dimensions">Height (CM)<input type="number" {...register('height')} /></label>
+            <label className="dimensions">Width (CM)<input type="number" {...register('width')} /></label>
+            <label className="dimensions">Length (CM)<input type="number" {...register('length')} /></label> </div>)
             : null}
         </div>
       </form>

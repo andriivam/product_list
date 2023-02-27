@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './products.css';
-// import productItems from './products';
 import { useNavigate } from "react-router-dom";
 import { deleteProducts } from '../axios/axiosGlobal';
 import axios from "axios";
@@ -19,7 +18,7 @@ export default function ProductItem() {
             const response = await axios.get('http://localhost:3001/products_list');
             setProducts(response.data)
             console.log(response, 'response')
-            console.log( products, 'products')
+            console.log(products, 'products')
         }
         catch (error) {
             console.log(error);
@@ -27,8 +26,8 @@ export default function ProductItem() {
     }
 
     useEffect(() => {
-getProducts()
-    },[])
+        getProducts()
+    }, [])
 
     console.log(selected, 'selected');
 
@@ -40,16 +39,11 @@ getProducts()
         }
     };
 
-  
+    const handleDelete = (id) => {
+        deleteProducts(id);
+        window.location.reload();
+    }
 
-const handleDelete = (id) => {
-    deleteProducts(id);
-//    window.location.reload();
-}
-    // const handleDelete = () => {
-    //     setProducts(products.filter((item) => !selected.includes(item.id)));
-    //     setSelected([]);
-    // }
 
     return (
         <>
@@ -57,7 +51,7 @@ const handleDelete = (id) => {
                 <h1>Products List</h1>
                 <div className="btnDiv">
                     <button className="btnAdd" onClick={() => { navigate('/addNewProduct') }} >ADD</button>
-                    <button className="btnDelete" onClick={() => {handleDelete(selected)}}>MASS Delete</button>
+                    <button className="btnDelete" onClick={() => { handleDelete(selected) }}>MASS Delete</button>
                 </div>
             </div>
             <div className="productItem">
@@ -68,9 +62,9 @@ const handleDelete = (id) => {
                             <li>{product.sku}</li>
                             <li>{product.name}</li>
                             <li>{product.price} $</li>
-                            {product.size !== null ?<li>Size: {product.size} MB</li> : null}
-                            {product.weight !== null ?<li>Weight: {product.size} KG</li> : null}
-                            {product.height || product.width || product.length!== null ?<li>Dimension: {product.height}x{product.width}x{product.length}</li> : null}
+                            {product.size !== null ? <li>Size: {product.size} MB</li> : null}
+                            {product.weight !== null ? <li>Weight: {product.size} KG</li> : null}
+                            {product.height || product.width || product.length !== null ? <li>Dimension: {product.height}x{product.width}x{product.length}</li> : null}
                         </ul>
                     </div>
                 ))}

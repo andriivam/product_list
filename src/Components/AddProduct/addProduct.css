@@ -67,3 +67,9 @@
     margin-top: 10px;
     align-items: center;
 }
+
+.dimensions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
