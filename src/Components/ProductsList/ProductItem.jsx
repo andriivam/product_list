@@ -53,7 +53,7 @@ export default function ProductItem() {
                 <h1>Products List</h1>
                 <div className="btnDiv">
                     <button className="btnAdd" onClick={() => { navigate('/addNewProduct') }} >ADD</button>
-                    <button id="delete-product-btn" className="delete-checkbox-btn" onClick={() => { handleDelete(selected) }}>MASS Delete</button>
+                    <button id="delete-product-btn" className="delete-checkbox-btn" onClick={() => { handleDelete(selected) }}>MASS DELETE</button>
                 </div>
             </div>
             <div className="productItem">
