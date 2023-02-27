@@ -42,7 +42,7 @@ export default function AddProduct() {
       </div>
       {/* Form section */}
       <div className="container">
-      <form action="" className="form" onSubmit={handleSubmit(onSubmit)}>
+      <form id="product_form" action="" className="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="box">
           <label htmlFor="sku">SKU </label>
           <div className="inputBox">
@@ -75,15 +75,15 @@ export default function AddProduct() {
           </select>
           {productType === 'dvd' ? <label>Size (MB)
         <p>Please, provide size in MB</p>
-            <input type="number" {...register('size')} /></label> : null}
+            <input id="size" type="number" {...register('size')} /></label> : null}
           {productType === 'book' ? <label>Weight (KG)
           <p>Please, provide size in KG</p>
-            <input type="number" {...register('weight')} /></label> : null}
+            <input id="weight" type="number" {...register('weight')} /></label> : null}
           {productType === 'furniture' ? (<div className="dimension">
           <p>Please, provide dimensions in CM</p>
-            <label className="dimensions">Height (CM)<input type="number" {...register('height')} /></label>
-            <label className="dimensions">Width (CM)<input type="number" {...register('width')} /></label>
-            <label className="dimensions">Length (CM)<input type="number" {...register('length')} /></label> </div>)
+            <label className="dimensions">Height (CM)<input id="height" type="number" {...register('height')} /></label>
+            <label className="dimensions">Width (CM)<input id="width" type="number" {...register('width')} /></label>
+            <label className="dimensions">Length (CM)<input id="length" type="number" {...register('length')} /></label> </div>)
             : null}
         </div>
       </form>

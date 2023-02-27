@@ -15,7 +15,7 @@ export default function ProductItem() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const getProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/products_list');
+            const response = await axios.get('http://localhost:3001/productsList');
             setProducts(response.data)
             console.log(response, 'response')
             console.log(products, 'products')
