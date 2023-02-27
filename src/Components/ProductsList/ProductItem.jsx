@@ -15,7 +15,7 @@ export default function ProductItem() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const getProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/productsList');
+            const response = await axios.get('https://product-list-backend.herokuapp.com/productsList');
             setProducts(response.data)
             console.log(response, 'response')
             console.log(products, 'products')
@@ -53,7 +53,7 @@ export default function ProductItem() {
                 <h1>Products List</h1>
                 <div className="btnDiv">
                     <button className="btnAdd" onClick={() => { navigate('/addNewProduct') }} >ADD</button>
-                    <button className="delete-checkbox" onClick={() => { handleDelete(selected) }}>MASS Delete</button>
+                    <button id="delete-product-btn" className="delete-checkbox" onClick={() => { handleDelete(selected) }}>MASS Delete</button>
                 </div>
             </div>
             <div className="productItem">

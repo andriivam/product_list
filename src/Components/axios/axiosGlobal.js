@@ -12,7 +12,7 @@ const axiosGlobal = axios.create({
     },
 });
 
-axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://product-list-backend.herokuapp.com/";
 
 // Add new product to the list
 export const addProduct = async (data) => {
