@@ -12,6 +12,7 @@ export default function ProductItem() {
 
     const navigate = useNavigate();
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const getProducts = async () => {
         try {
             const response = await axios.get('http://localhost:3001/products_list');
@@ -23,10 +24,11 @@ export default function ProductItem() {
             console.log(error);
         }
     }
-    getProducts()
+  
 
     useEffect(() => {
-    }, [])
+        getProducts()
+    }, [getProducts])
 
     console.log(selected, 'selected');
 
