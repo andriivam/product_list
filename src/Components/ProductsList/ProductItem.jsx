@@ -12,23 +12,21 @@ export default function ProductItem() {
 
     const navigate = useNavigate();
 
-
-    
-    useEffect(() => {
-        const getProducts = async () => {
-            try {
-                const response = await axios.get('http://localhost:3001/products_list');
-                setProducts(response.data)
-                console.log(response, 'response')
-                console.log(products, 'products')
-            }
-            catch (error) {
-                console.log(error);
-            }
+    const getProducts = async () => {
+        try {
+            const response = await axios.get('http://localhost:3001/products_list');
+            setProducts(response.data)
+            console.log(response, 'response')
+            console.log(products, 'products')
         }
-    
-        getProducts()
-    }, [products])
+        catch (error) {
+            console.log(error);
+        }
+    }
+    getProducts()
+
+    useEffect(() => {
+    }, [])
 
     console.log(selected, 'selected');
 
