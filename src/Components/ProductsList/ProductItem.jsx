@@ -28,7 +28,8 @@ export default function ProductItem() {
 
     useEffect(() => {
         getProducts()
-    }, [getProducts])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     console.log(selected, 'selected');
 
