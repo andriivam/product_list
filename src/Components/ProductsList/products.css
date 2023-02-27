@@ -21,7 +21,7 @@
     height: 40px;
   }
   
-  .delete-checkbox {
+  .delete-checkbox-btn {
     background-color: red;
     border-radius: 5px;
     width: 120px;
@@ -44,9 +44,8 @@
     flex-direction: column;
 }
 
-.checkbox {
-
-   
+.delete-checkbox {
+background: #000;
 }
 
 /* style ul */

@@ -53,13 +53,13 @@ export default function ProductItem() {
                 <h1>Products List</h1>
                 <div className="btnDiv">
                     <button className="btnAdd" onClick={() => { navigate('/addNewProduct') }} >ADD</button>
-                    <button id="delete-product-btn" className="delete-checkbox" onClick={() => { handleDelete(selected) }}>MASS Delete</button>
+                    <button id="delete-product-btn" className="delete-checkbox-btn" onClick={() => { handleDelete(selected) }}>MASS Delete</button>
                 </div>
             </div>
             <div className="productItem">
                 {products.map((product) => (
                     <div key={product.id} className="productBox">
-                        <input className="checkbox" type="checkbox" onChange={() => handleCheckboxChange(product.id)} />
+                        <input className="delete-checkbox" type="checkbox" onChange={() => handleCheckboxChange(product.id)} />
                         <ul className="list">
                             <li>{product.sku}</li>
                             <li>{product.name}</li>

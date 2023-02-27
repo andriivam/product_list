@@ -21,13 +21,11 @@ export default function AddProduct() {
   const handleProductTypeChange = (event) => {
     const type = event.target.value;
     setProductType(type);
-    console.log(type);
   }
 
 
   const onSubmit = async (data) => {
     addProduct(data);
-    console.log(data, ' data from submit');
     navigate('/');
   };
 
