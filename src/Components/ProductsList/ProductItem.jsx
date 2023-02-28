@@ -24,14 +24,12 @@ export default function ProductItem() {
             console.log(error);
         }
     }
-  
 
     useEffect(() => {
         getProducts()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    console.log(selected, 'selected');
 
     const handleCheckboxChange = (id) => {
         if (selected.includes(id)) {
@@ -41,8 +39,8 @@ export default function ProductItem() {
         }
     };
 
-    const handleDelete = (id) => {
-        deleteProducts(id);
+    const handleDelete = async (id) => {
+       await  deleteProducts(id);
         window.location.reload();
     }
 

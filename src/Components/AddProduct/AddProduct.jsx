@@ -14,7 +14,7 @@ export default function AddProduct() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log(errors);
+
   const navigate = useNavigate();
 
 
@@ -25,7 +25,7 @@ export default function AddProduct() {
 
 
   const onSubmit = async (data) => {
-    addProduct(data);
+    await addProduct(data);
     navigate('/');
   };
 
